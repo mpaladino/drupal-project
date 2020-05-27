@@ -3,7 +3,10 @@
 name: Pantheon Remote Branch Push
 
 # Repo Sync on Push
-on: push
+on: 
+  push:
+    branches-ignore:
+      - master 
 jobs:
   repo-sync:
     runs-on: ubuntu-latest
@@ -14,5 +17,5 @@ jobs:
         source_repo: "https://github.com/mpaladino/drupal-project.git"
         source_branch: "refs/remotes/source/*"
         destination_repo: ${{ secrets.REMOTE_PANTHEON_REPO }}
-        destination_branch: ""
+        destination_branch: "refs/heads/*"
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
