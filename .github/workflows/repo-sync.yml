@@ -11,11 +11,15 @@ jobs:
   repo-sync:
     runs-on: ubuntu-latest
     steps:
-    - name: Git Sync Action
-      uses: wei/git-sync@v2.0.0
-      with:
-        source_repo: ${{ secrets.MY_SOURCE_REPO }}
-        source_branch: "refs/remotes/source/*"
-        destination_repo: ${{ secrets.REMOTE_PANTHEON_REPO }}
-        destination_branch: "refs/heads/*"
-        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+- name: Extract branch name
+      shell: bash
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch
+#- name: Git Sync Action
+#      uses: wei/git-sync@v2.0.0
+#      with:
+#        source_repo: ${{ secrets.MY_SOURCE_REPO }}
+#        source_branch: "refs/remotes/source/*"
+#        destination_repo: ${{ secrets.REMOTE_PANTHEON_REPO }}
+#        destination_branch: github.ref
+#        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
