@@ -11,7 +11,7 @@ jobs:
     - name: Git Sync Action
       uses: wei/git-sync@v2.0.0
       with:
-        source_repo: ""
+        source_repo: "https://github.com/mpaladino/drupal-project.git"
         source_branch: "refs/remotes/source/*"
         destination_repo: "ssh://codeserver.dev.ed2c62f6-2712-4467-81e1-85056a66f84f@codeserver.dev.ed2c62f6-2712-4467-81e1-85056a66f84f.drush.in:2222/~/repository.git"
         destination_branch: "refs/heads/*"
