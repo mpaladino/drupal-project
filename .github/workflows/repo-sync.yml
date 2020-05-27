@@ -8,13 +8,14 @@ on:
     branches-ignore:
       - master 
 jobs:
-  repo-sync:
-    runs-on: ubuntu-latest
-    steps:
-- name: Extract branch name
+  - name: Extract branch name
       shell: bash
       run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-      id: extract_branch
+      id: extract_branch:
+     
+  #repo-sync:
+  #  runs-on: ubuntu-latest
+  #  steps:
 #- name: Git Sync Action
 #      uses: wei/git-sync@v2.0.0
 #      with:
