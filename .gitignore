@@ -127,8 +127,5 @@ upstream/web/
 # Ignore Lando Stuff
 .lando.yml
 
-# Ignore composer.lock
-composer.lock
-
 # Ignore .env files as they are personal
 #/.env
