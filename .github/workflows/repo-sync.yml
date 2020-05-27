@@ -14,5 +14,5 @@ jobs:
         source_repo: "https://github.com/mpaladino/drupal-project.git"
         source_branch: "refs/remotes/source/*"
         destination_repo: ${{ secrets.REMOTE_PANTHEON_REPO }}
-        destination_branch: "refs/heads/*"
+        destination_branch: ""
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
