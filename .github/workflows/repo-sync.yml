@@ -1,0 +1,18 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Pantheon Remote Branch Push
+
+# Repo Sync on Push
+on: push
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Git Sync Action
+      uses: wei/git-sync@v2.0.0
+      with:
+        source_repo: "GITHUB_REPOSITORY"
+        source_branch: ""
+        destination_repo: "ssh://codeserver.dev.ed2c62f6-2712-4467-81e1-85056a66f84f@codeserver.dev.ed2c62f6-2712-4467-81e1-85056a66f84f.drush.in:2222/~/repository.git"
+        destination_branch: ""
+        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
