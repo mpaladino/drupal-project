@@ -15,6 +15,7 @@
     ],
     "require": {
         "drupal/metatag": "^1.13",
+        "drupal/redirect": "^1.6",
         "internal/upstream-configuration": "*"
     },
     "conflict": {
