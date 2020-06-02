@@ -19,6 +19,7 @@
         "drupal/pathauto": "^1.8",
         "drupal/redirect": "^1.6",
         "drupal/robotstxt": "^1.4",
+        "drupal/webform": "^5.15",
         "internal/upstream-configuration": "*"
     },
     "conflict": {
