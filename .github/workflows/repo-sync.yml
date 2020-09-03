@@ -16,6 +16,6 @@ jobs:
       with:
         source_repo: ${{ secrets.MY_SOURCE_REPO }}
         source_branch: "refs/remotes/source/${GITHUB_REF#refs/heads/}"
-        destination_repo: ${{ secrets.REMOTE_PANTHEON_REPO }}
+        destination_repo: ${{ secrets.REMOTE_PANTHEON_REPO_NEIU }}
         destination_branch: "refs/heads/${GITHUB_REF#refs/heads/}"
         ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
